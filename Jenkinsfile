@@ -5,7 +5,7 @@ pipeline
     agent any
     stages
     {
-        stage('Build')
+        stage('ScanCodeBase')
         {
             steps
             {
