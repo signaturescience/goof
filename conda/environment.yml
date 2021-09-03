@@ -1,25 +1,13 @@
 name: goof
 
-channels:
-  - bioconda
-  - conda-forge
-  - r
-  - defaults
 dependencies:
-  - pip>=20.2.4
-  - psutil>=5.7.3=py39h38d8fee_0
-  - datrie>=0.8.2=py39h07f9747_1
-  - snakemake>=5.5.3
-  - r-base>=4.0.3
-  - r-essentials>=4.0=r40_2002
-  - r-ggplot2>=3.3.2=r40h6115d3f_0
-  - r-dt>=0.16=r40h142f84f_0
-  - r-stringi>=1.5.3=r40h604b29c_0
-  - r-dplyr>=1.0.2=r40h0357c0b_0
-  - r-tidyr>=1.1.2=r40h0357c0b_0
-  - r-r.utils>=2.10.1=r40h6115d3f_0
-  - r-rjson>=0.2.20=r40h0357c0b_1002
-  - r-ggfittext>=0.9.0
-  - pandoc=2.10.1
-  - pip:
-    - osfclient==0.0.4
+  - ipython=7.13
+  - matplotlib=3.1
+  - pandas=1.0
+  - pip=20.0
+  - python=3.6
+  - scikit-learn=0.22
+
+pip:
+   - kaggle==1.5
+   - yellowbrick==0.9
