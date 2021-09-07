@@ -39,6 +39,7 @@ pipeline
             }
         }
         stage('PushApplicationContainers')
+        {
             steps
             {
                 // Here is when the packaging process happens for final binaries, but presently just pushing built containers to nexus
@@ -51,5 +52,6 @@ pipeline
                     docker push -a nexus.corp.signaturescience.com/repository/sigsci-docker-registry/goof-conda:latest
                     ''')
             }
+        }
     }
 }
