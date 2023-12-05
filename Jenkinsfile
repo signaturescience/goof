@@ -17,7 +17,7 @@ pipeline
                     ])
                     {
                         sh('''#!/usr/bin/env bash
-                        printf "Start scan code base: %s - %s\n" "$USERAPIKEY" "$ORGAPIKEY"
+                        sudo docker run --mount type=bind,src=/home/achilles/Documents/pubmed_scrape,dst=/repo cr.sigsci.dev/whitesource:latest -c /repo/config.w.key -d /repo -product pubmed_scrape_product -project pubmed_scrape_project
                         #printf '%b\n' $PASSWORD | docker login nexus.corp.signaturescience.com/repository/sigsci-docker-registry --username $USERNAME --password-stdin 
                         #docker run --mount type=bind,src=${WORKSPACE},dst=/repo --env CLI_OPTIONS="-userKey $USERAPIKEY -apiKey $ORGAPIKEY -c /repo/wss-unified-agent.config -d /repo -product Jenkins -project goof" nexus.corp.signaturescience.com/repository/sigsci-docker-registry/whitesource:latest 
                         ''')
